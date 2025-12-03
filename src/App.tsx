@@ -1,8 +1,10 @@
+import Header from './components/header/header'
+
 function App() {
   return (
-    <div className="bg-red-500">
-      <p className="text-3xl">test</p>
-    </div>
+    <>
+      <Header />
+    </>
   )
 }
 
