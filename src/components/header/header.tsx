@@ -1,3 +1,71 @@
+import NavButton from '@/components/ui/navButton'
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuTrigger,
+  DropdownMenuItem,
+} from '@/components/ui/dropdown-menu'
+
+const dropDownMenuItems = [
+  {
+    title: 'Trading',
+    items: [
+      'Starting',
+      'Why trade with premier?',
+      'Accounts',
+      'Deposits and Withdrawals',
+      'Social Media',
+    ],
+  },
+]
+
+export function NavigationMenu() {
+  return (
+    <DropdownMenu>
+      <DropdownMenuTrigger asChild>
+        <NavButton variant="navButton">Open</NavButton>
+      </DropdownMenuTrigger>
+
+      {dropDownMenuItems.map((menu) => (
+        <MenuItems key={menu.title} title={menu.title} items={menu.items} />
+      ))}
+    </DropdownMenu>
+  )
+}
+
+type MenuDropDownProps = {
+  title: string
+  items: string[]
+}
+
+const MenuItems = ({ title, items }: MenuDropDownProps) => {
+  return (
+    <DropdownMenuContent className="w-auto" align="start">
+      <DropdownMenuItem className="flex flex-col items-start justify-between gap-6 w-full pl-8 pr-16 py-4">
+        <p className="font-bold text-[18px] text-premier-red">{title}</p>
+
+        {items.map((item) => (
+          <li
+            key={item}
+            className="list-none w-full flex flex-row items-center justify-start gap-4"
+          >
+            <div className="w-[22px] h-[22px] bg-[#FFF5F5] inline-flex items-center justify-center">
+              <img
+                src="src/assets/icons/GraphAscend.svg"
+                alt="Premier Markets Logo"
+              />
+            </div>
+
+            <p key={item} className="text-[18px]">
+              {item}
+            </p>
+          </li>
+        ))}
+      </DropdownMenuItem>
+    </DropdownMenuContent>
+  )
+}
+
 const Header = () => {
   return (
     <section className="h-[130px] border border-green-500">
@@ -17,7 +85,7 @@ const NavigationBar = () => {
       />
 
       <div className="w-full mx-[120px] border-2 border-red-500">
-        <p>Trading</p>
+        <NavigationMenu />
       </div>
 
       <img
