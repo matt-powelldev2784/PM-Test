@@ -5,81 +5,18 @@ import {
   DropdownMenuTrigger,
   DropdownMenuItem,
 } from '@/components/ui/dropdown-menu'
-
-const dropDownMenuItems = [
-  {
-    menuName: 'Trading',
-    title: 'Trading',
-    items: [
-      'Starting',
-      'Why trade with premier?',
-      'Accounts',
-      'Deposits and Withdrawals',
-      'Social Media',
-    ],
-  },
-]
-
-export function NavigationMenu() {
-  return (
-    <DropdownMenu>
-      {dropDownMenuItems.map((menu) => (
-        <>
-          <DropdownMenuTrigger asChild>
-            <NavButton variant="navButton" className="text-[18px]">
-              {menu.menuName}
-            </NavButton>
-          </DropdownMenuTrigger>
-          <MenuItems key={menu.title} title={menu.title} items={menu.items} />
-        </>
-      ))}
-    </DropdownMenu>
-  )
-}
-
-type MenuDropDownProps = {
-  title: string
-  items: string[]
-}
-
-const MenuItems = ({ title, items }: MenuDropDownProps) => {
-  return (
-    <DropdownMenuContent className="w-auto" align="start">
-      <DropdownMenuItem className="flex flex-col items-start justify-between gap-6 w-full pl-8 pr-16 py-4">
-        <p className="font-bold text-[18px] text-premier-red">{title}</p>
-
-        {items.map((item) => (
-          <li
-            key={item}
-            className="list-none w-full flex flex-row items-center justify-start gap-4"
-          >
-            <div className="w-[22px] h-[22px] bg-[#FFF5F5] inline-flex items-center justify-center">
-              <img
-                src="src/assets/icons/GraphAscend.svg"
-                alt="Premier Markets Logo"
-              />
-            </div>
-
-            <p key={item} className="text-[18px]">
-              {item}
-            </p>
-          </li>
-        ))}
-      </DropdownMenuItem>
-    </DropdownMenuContent>
-  )
-}
+import { navigationItems } from './navigationItems'
 
 const Header = () => {
   return (
     <section className="h-[130px] ">
       <HeaderTopBar />
-      <NavigationBar />
+      <BottomNavigationBar />
     </section>
   )
 }
 
-const NavigationBar = () => {
+const BottomNavigationBar = () => {
   return (
     <nav className="px-[60px] h-[90px] flex items-center justify-between">
       <img
@@ -88,9 +25,7 @@ const NavigationBar = () => {
         className="w-40 h-[45px]"
       />
 
-      <div className="w-full mx-[120px]">
-        <NavigationMenu />
-      </div>
+      <NavigationMenu />
 
       <img
         src="src/assets/Header/Light/Center/logo.svg"
@@ -133,6 +68,60 @@ const HeaderTopBar = () => {
         </div>
       </div>
     </div>
+  )
+}
+
+export function NavigationMenu() {
+  return (
+    <div className="w-full mx-[120px]">
+      {navigationItems.map((menu) => (
+        <DropdownMenu key={menu.menuName}>
+          <DropdownMenuTrigger asChild>
+            <NavButton variant="navButton" className="text-[18px]">
+              {menu.menuName}
+              <img
+                src="src/assets/Header/Light/Center/Chevron.svg"
+                alt="arrow down icon"
+              />
+            </NavButton>
+          </DropdownMenuTrigger>
+          <MenuItems title={menu.title} items={menu.items} />
+        </DropdownMenu>
+      ))}
+    </div>
+  )
+}
+
+type MenuDropDownProps = {
+  title: string
+  items: string[]
+}
+
+const MenuItems = ({ title, items }: MenuDropDownProps) => {
+  return (
+    <DropdownMenuContent className="w-auto" align="start">
+      <DropdownMenuItem className="flex flex-col items-start justify-between gap-6 w-full pl-8 pr-16 py-4">
+        <p className="font-bold text-[18px] text-premier-red">{title}</p>
+
+        {items.map((item) => (
+          <li
+            key={item}
+            className="list-none w-full flex flex-row items-center justify-start gap-4"
+          >
+            <div className="w-[22px] h-[22px] bg-[#FFF5F5] inline-flex items-center justify-center">
+              <img
+                src="src/assets/icons/GraphAscend.svg"
+                alt="Premier Markets Logo"
+              />
+            </div>
+
+            <p key={item} className="text-[18px]">
+              {item}
+            </p>
+          </li>
+        ))}
+      </DropdownMenuItem>
+    </DropdownMenuContent>
   )
 }
 
