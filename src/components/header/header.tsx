@@ -73,7 +73,7 @@ const HeaderTopBar = () => {
 
 export function NavigationMenu() {
   return (
-    <div className="w-full mx-auto flex items-center justify-center gap-6">
+    <div className="w-full mx-auto flex items-center justify-center gap-3">
       {navigationItems.map((menu) => (
         <DropdownMenu key={menu.menuName}>
           <DropdownMenuTrigger asChild>
@@ -91,6 +91,14 @@ export function NavigationMenu() {
           <MenuItems title={menu.title} items={menu.items} />
         </DropdownMenu>
       ))}
+
+      <div className="flex gap-2">
+        <p className="text-premier-red">Partner with us</p>
+        <img
+          src="src/assets/Header/Light/Center/Arrow Right.svg"
+          alt="arrow down icon"
+        />
+      </div>
     </div>
   )
 }
