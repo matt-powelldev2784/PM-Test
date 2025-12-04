@@ -88,17 +88,18 @@ export function NavigationMenu() {
               />
             </NavButton>
           </DropdownMenuTrigger>
+
           <MenuItems title={menu.title} items={menu.items} />
         </DropdownMenu>
       ))}
 
-      <div className="flex gap-2">
+      <a className="flex gap-2">
         <p className="text-premier-red">Partner with us</p>
         <img
           src="src/assets/Header/Light/Center/Arrow Right.svg"
           alt="arrow down icon"
         />
-      </div>
+      </a>
     </div>
   )
 }
@@ -115,7 +116,7 @@ const MenuItems = ({ title, items }: MenuDropDownProps) => {
         <p className="font-bold text-[18px] text-premier-red">{title}</p>
 
         {items.map((item) => (
-          <li
+          <a
             key={item}
             className="list-none w-full flex flex-row items-center justify-start gap-4"
           >
@@ -129,7 +130,7 @@ const MenuItems = ({ title, items }: MenuDropDownProps) => {
             <p key={item} className="text-[18px]">
               {item}
             </p>
-          </li>
+          </a>
         ))}
       </DropdownMenuItem>
     </DropdownMenuContent>
