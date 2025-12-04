@@ -77,7 +77,10 @@ export function NavigationMenu() {
       {navigationItems.map((menu) => (
         <DropdownMenu key={menu.menuName}>
           <DropdownMenuTrigger asChild>
-            <NavButton variant="navButton" className="text-[18px]">
+            <NavButton
+              variant="navButton"
+              className="text-[16px] font-weight-100"
+            >
               {menu.menuName}
               <img
                 src="src/assets/Header/Light/Center/Chevron.svg"
