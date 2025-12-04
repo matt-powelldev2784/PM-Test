@@ -8,6 +8,7 @@ import {
 
 const dropDownMenuItems = [
   {
+    menuName: 'Trading',
     title: 'Trading',
     items: [
       'Starting',
@@ -22,12 +23,15 @@ const dropDownMenuItems = [
 export function NavigationMenu() {
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger asChild>
-        <NavButton variant="navButton">Open</NavButton>
-      </DropdownMenuTrigger>
-
       {dropDownMenuItems.map((menu) => (
-        <MenuItems key={menu.title} title={menu.title} items={menu.items} />
+        <>
+          <DropdownMenuTrigger asChild>
+            <NavButton variant="navButton" className="text-[18px]">
+              {menu.menuName}
+            </NavButton>
+          </DropdownMenuTrigger>
+          <MenuItems key={menu.title} title={menu.title} items={menu.items} />
+        </>
       ))}
     </DropdownMenu>
   )
@@ -68,7 +72,7 @@ const MenuItems = ({ title, items }: MenuDropDownProps) => {
 
 const Header = () => {
   return (
-    <section className="h-[130px] border border-green-500">
+    <section className="h-[130px] ">
       <HeaderTopBar />
       <NavigationBar />
     </section>
@@ -77,14 +81,14 @@ const Header = () => {
 
 const NavigationBar = () => {
   return (
-    <nav className="px-[60px] h-[90px] flex items-center justify-between border border-red-500">
+    <nav className="px-[60px] h-[90px] flex items-center justify-between">
       <img
         src="src/assets/Header/Light/Center/logo.svg"
         alt="Premier Markets Logo"
         className="w-40 h-[45px]"
       />
 
-      <div className="w-full mx-[120px] border-2 border-red-500">
+      <div className="w-full mx-[120px]">
         <NavigationMenu />
       </div>
 
