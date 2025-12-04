@@ -16,24 +16,7 @@ const Header = () => {
   )
 }
 
-const BottomNavigationBar = () => {
-  return (
-    <nav className="px-[60px] h-[90px] flex items-center justify-between">
-      <img
-        src="src/assets/Header/Light/Center/logo.svg"
-        alt="Premier Markets Logo"
-        className="w-40 h-[45px]"
-      />
 
-      <NavigationMenu />
-
-      <img
-        src="src/assets/Header/Light/Center/logo.svg"
-        alt="Premier Markets Logo"
-      />
-    </nav>
-  )
-}
 
 const HeaderTopBar = () => {
   return (
@@ -68,6 +51,27 @@ const HeaderTopBar = () => {
         </div>
       </div>
     </div>
+  )
+}
+
+const BottomNavigationBar = () => {
+  return (
+    <nav className="px-[60px] h-[90px] flex items-center justify-between">
+      <img
+        src="src/assets/Header/Light/Center/logo.svg"
+        alt="Premier Markets Logo"
+        className="w-40 h-[45px]"
+      />
+
+      <NavigationMenu />
+
+      <NavButton
+        variant="redShadow"
+        className="bg-premier-red px-6 py-3 text-white"
+      >
+        Register
+      </NavButton>
+    </nav>
   )
 }
 

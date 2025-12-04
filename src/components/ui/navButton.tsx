@@ -20,6 +20,8 @@ const buttonVariants = cva(
         link: 'text-primary underline-offset-4 hover:underline',
         navButton:
           'text-[14px] text-[#010205] hover:border-none border-none focus:border-none focus-visible:outline-none focus-visible:border-transparent focus-visible:ring-0',
+        redShadow:
+          'inline-flex items-center justify-center bg-premier-red px-6 py-2.5 text-white text-[16px] font-semibold rounded-3xl shadow-md shadow-black/40',
       },
       size: {
         default: 'h-9 px-4 py-2 has-[>svg]:px-3',
