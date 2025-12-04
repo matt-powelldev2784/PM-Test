@@ -73,7 +73,7 @@ const HeaderTopBar = () => {
 
 export function NavigationMenu() {
   return (
-    <div className="w-full mx-[120px]">
+    <div className="w-full mx-auto flex items-center justify-center gap-6">
       {navigationItems.map((menu) => (
         <DropdownMenu key={menu.menuName}>
           <DropdownMenuTrigger asChild>
