@@ -1,11 +1,23 @@
-import NavButton from '@/components/ui/navButton'
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuTrigger,
   DropdownMenuItem,
 } from '@/components/ui/dropdown-menu'
+
+import {
+  Dialog,
+  DialogClose,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from '@/components/ui/dialog'
 import { navigationItems } from './navigationItems'
+import Button from '../ui/Button'
+import menuIcon from '@/assets/menu/outline/menu/outline/menu-line-horizontal.svg'
 
 const Header = () => {
   return (
@@ -30,7 +42,7 @@ const MobileNavigation = () => {
       <div className="mx-8 w-full flex items-center justify-between">
         <div className="flex gap-2">
           <div className="w-6 h-6 flex items-center justify-center">
-            <MobileNavigationMenu />
+            <MobileMenu />
           </div>
 
           <img
@@ -53,54 +65,31 @@ const MobileNavigation = () => {
   )
 }
 
-const MobileNavigationMenu = () => {
+const MobileMenu = () => {
   return (
-    <DropdownMenu>
-      <DropdownMenuTrigger asChild>
-        <NavButton variant="navButton" className="text-[16px] font-weight-100">
-          <img
-            src="src/assets/menu/outline/menu/outline/menu-line-horizontal.svg"
-            alt="Menu Items"
-            className="w-6 h-6"
-          />
-        </NavButton>
-      </DropdownMenuTrigger>
+    <Dialog>
+      <form>
+        <DialogTrigger asChild>
+          <Button
+            variant="navButton"
+            aria-label="Open menu"
+            className="h-10 w-10 p-0 items-center justify-center"
+          >
+            <img src={menuIcon} alt="" className="h-6 w-6" />
+          </Button>
+        </DialogTrigger>
 
-      <MobileMenuItems />
-    </DropdownMenu>
-  )
-}
+        <DialogContent className="sm:max-w-[425px]">
+          <div className="grid gap-4">
+            <p>test</p>
+          </div>
 
-const MobileMenuItems = () => {
-  return (
-    <DropdownMenuContent className="min-w-screen border-none">
-      {navigationItems.map((menu) => (
-        <DropdownMenuItem
-          key={menu.menuName}
-          className="flex flex-col items-start justify-between gap-6 w-full pl-8 pr-16 py-4"
-        >
-          <p className="font-bold text-[18px] text-premier-red">{menu.title}</p>
-
-          {menu.items.map((item) => (
-            <a
-              key={item}
-              className="list-none w-full flex flex-row items-center justify-start gap-4"
-            >
-              <div className="w-[22px] h-[22px] bg-[#FFF5F5] inline-flex items-center justify-center">
-                <img
-                  src="src/assets/icons/GraphAscend.svg"
-                  alt="Premier Markets Logo"
-                />
-              </div>
-
-              <p key={item} className="text-[18px]">
-                {item}
-              </p>
-            </a>
-          ))}
-        </DropdownMenuItem>
-      ))}
-    </DropdownMenuContent>
+          <DialogClose asChild>
+            <Button variant="outline">Cancel</Button>
+          </DialogClose>
+        </DialogContent>
+      </form>
+    </Dialog>
   )
 }
 
@@ -152,12 +141,12 @@ const BottomNavigationBar = () => {
       <NavigationMenu />
 
       <div className="flex justify-center items-center gap-6">
-        <NavButton
+        <Button
           variant="redShadow"
           className="bg-premier-red px-6 py-3 text-white"
         >
           Register
-        </NavButton>
+        </Button>
         <img
           src="src/assets/Header/Light/Center/User.svg"
           alt="Premier Markets Logo"
@@ -174,16 +163,13 @@ export function NavigationMenu() {
       {navigationItems.map((menu) => (
         <DropdownMenu key={menu.menuName}>
           <DropdownMenuTrigger asChild>
-            <NavButton
-              variant="navButton"
-              className="text-[16px] font-weight-100"
-            >
+            <Button variant="navButton" className="text-[16px] font-weight-100">
               {menu.menuName}
               <img
                 src="src/assets/Header/Light/Center/Chevron.svg"
                 alt="arrow down icon"
               />
-            </NavButton>
+            </Button>
           </DropdownMenuTrigger>
 
           <MenuItems title={menu.title} items={menu.items} />

@@ -39,7 +39,7 @@ const buttonVariants = cva(
   }
 )
 
-function NavButton({
+function Button({
   className,
   variant,
   size,
@@ -60,4 +60,4 @@ function NavButton({
   )
 }
 
-export default NavButton
+export default Button
