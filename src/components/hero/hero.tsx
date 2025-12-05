@@ -7,7 +7,7 @@ const Hero = () => {
 
       {/* Bottom Clip Path */}
       <img
-        src="src/assets/icons/hero-clip-path.svg"
+        src="src/assets/images/hero-clip-path.svg"
         alt="arrow down icon"
         className="absolute bottom-0 w-full object-fit"
       />

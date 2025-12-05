@@ -13,7 +13,7 @@ import {
   DialogTrigger,
 } from '@/components/ui/dialog'
 import { navigationItems } from './navigationItems'
-import menuIcon from '@/assets/icons/menu-line-horizontal.svg'
+import menuIcon from '@/assets/images/menu-line-horizontal.svg'
 import { Input } from '../ui/input'
 import { Search } from 'lucide-react'
 import Button from '../ui/button'
@@ -34,8 +34,6 @@ const Header = () => {
     </>
   )
 }
-
-
 
 const TopHeaderBar = () => {
   return (
@@ -60,7 +58,7 @@ const TopHeaderBar = () => {
 
             <div className="flex items-center justify-center">
               <img
-                src="src/assets/icons/united-kingdom.png"
+                src="src/assets/images/united-kingdom.png"
                 alt="flag icon"
                 className="w-[30px] h-[30px]"
               />
@@ -77,7 +75,7 @@ const BottomNavigationBar = () => {
   return (
     <nav className="px-[60px] h-[90px] flex items-center justify-between">
       <img
-        src="src/assets/icons/logo.svg"
+        src="src/assets/images/logo.svg"
         alt="Premier Markets Logo"
         className="w-40 h-[45px]"
       />
@@ -92,7 +90,7 @@ const BottomNavigationBar = () => {
           Register
         </Button>
         <img
-          src="src/assets/icons/User.svg"
+          src="src/assets/images/User.svg"
           alt="Premier Markets Logo"
           className="w-6 h-[25px]"
         />
@@ -109,7 +107,7 @@ export function NavigationMenu() {
           <DropdownMenuTrigger asChild>
             <Button variant="navButton" className="text-[16px] font-weight-100">
               {menu.menuName}
-              <img src="src/assets/icons/chevron.svg" alt="arrow down icon" />
+              <img src="src/assets/images/chevron.svg" alt="arrow down icon" />
             </Button>
           </DropdownMenuTrigger>
 
@@ -119,7 +117,7 @@ export function NavigationMenu() {
 
       <a className="flex gap-2">
         <p className="text-premier-red">Partner with us</p>
-        <img src="src/assets/icons/arrow-right.svg" alt="arrow down icon" />
+        <img src="src/assets/images/arrow-right.svg" alt="arrow down icon" />
       </a>
     </div>
   )
@@ -143,7 +141,7 @@ const MenuItems = ({ title, items }: MenuDropDownProps) => {
           >
             <div className="w-[22px] h-[22px] bg-[#FFF5F5] inline-flex items-center justify-center">
               <img
-                src="src/assets/icons/GraphAscend.svg"
+                src="src/assets/images/GraphAscend.svg"
                 alt="Premier Markets Logo"
               />
             </div>
@@ -168,7 +166,7 @@ const MobileNavigation = () => {
           </div>
 
           <img
-            src="src/assets/icons/logo.svg"
+            src="src/assets/images/logo.svg"
             alt="Premier Markets Logo"
             className="w-[81px] h-[23px]"
           />
@@ -176,7 +174,7 @@ const MobileNavigation = () => {
 
         <div className="flex items-center justify-center">
           <img
-            src="src/assets/icons/united-kingdom.png"
+            src="src/assets/images/united-kingdom.png"
             alt="flag icon"
             className="w-[30px] h-[30px]"
           />
@@ -202,7 +200,7 @@ const MobileMenu = () => {
         </DialogHeader>
 
         <img
-          src="src/assets/icons/logo.svg"
+          src="src/assets/images/logo.svg"
           alt="Premier Markets Logo"
           className="w-[81px] h-[23px]"
         />
@@ -248,7 +246,7 @@ export function MobileMenuItems() {
 
       <a className="flex justify-between gap-2 mt-4">
         <p className="text-premier-red font-bold">Partner with us</p>
-        <img src="src/assets/icons/arrow-right.svg" alt="arrow down icon" />
+        <img src="src/assets/images/arrow-right.svg" alt="arrow down icon" />
       </a>
 
       <Button
