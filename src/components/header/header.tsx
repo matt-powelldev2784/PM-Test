@@ -13,7 +13,7 @@ import {
   DialogTrigger,
 } from '@/components/ui/dialog'
 import { navigationItems } from './navigationItems'
-import menuIcon from '@/assets/menu/outline/menu/outline/menu-line-horizontal.svg'
+import menuIcon from '@/assets/icons/menu-line-horizontal.svg'
 import { Input } from '../ui/input'
 import { Search } from 'lucide-react'
 import Button from '../ui/button'
@@ -60,7 +60,7 @@ const TopHeaderBar = () => {
 
             <div className="flex items-center justify-center">
               <img
-                src="src/assets/Header/Light/Center/united-kingdom.png"
+                src="src/assets/icons/united-kingdom.png"
                 alt="flag icon"
                 className="w-[30px] h-[30px]"
               />
@@ -77,7 +77,7 @@ const BottomNavigationBar = () => {
   return (
     <nav className="px-[60px] h-[90px] flex items-center justify-between">
       <img
-        src="src/assets/Header/Light/Center/logo.svg"
+        src="src/assets/icons/logo.svg"
         alt="Premier Markets Logo"
         className="w-40 h-[45px]"
       />
@@ -92,7 +92,7 @@ const BottomNavigationBar = () => {
           Register
         </Button>
         <img
-          src="src/assets/Header/Light/Center/User.svg"
+          src="src/assets/icons/User.svg"
           alt="Premier Markets Logo"
           className="w-6 h-[25px]"
         />
@@ -109,10 +109,7 @@ export function NavigationMenu() {
           <DropdownMenuTrigger asChild>
             <Button variant="navButton" className="text-[16px] font-weight-100">
               {menu.menuName}
-              <img
-                src="src/assets/Header/Light/Center/Chevron.svg"
-                alt="arrow down icon"
-              />
+              <img src="src/assets/icons/chevron.svg" alt="arrow down icon" />
             </Button>
           </DropdownMenuTrigger>
 
@@ -122,10 +119,7 @@ export function NavigationMenu() {
 
       <a className="flex gap-2">
         <p className="text-premier-red">Partner with us</p>
-        <img
-          src="src/assets/Header/Light/Center/Arrow Right.svg"
-          alt="arrow down icon"
-        />
+        <img src="src/assets/icons/arrow-right.svg" alt="arrow down icon" />
       </a>
     </div>
   )
@@ -174,7 +168,7 @@ const MobileNavigation = () => {
           </div>
 
           <img
-            src="src/assets/Header/Light/Center/logo.svg"
+            src="src/assets/icons/logo.svg"
             alt="Premier Markets Logo"
             className="w-[81px] h-[23px]"
           />
@@ -182,7 +176,7 @@ const MobileNavigation = () => {
 
         <div className="flex items-center justify-center">
           <img
-            src="src/assets/Header/Light/Center/united-kingdom.png"
+            src="src/assets/icons/united-kingdom.png"
             alt="flag icon"
             className="w-[30px] h-[30px]"
           />
@@ -197,12 +191,8 @@ const MobileMenu = () => {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button
-          variant="navButton"
-          aria-label="Open menu"
-          className="h-10 w-10 p-0 items-center justify-center"
-        >
-          <img src={menuIcon} alt="" className="h-6 w-6" />
+        <Button variant="navButton" aria-label="Open menu">
+          <img src={menuIcon} alt="open menu icon" className="h-6 w-6" />
         </Button>
       </DialogTrigger>
 
@@ -212,18 +202,86 @@ const MobileMenu = () => {
         </DialogHeader>
 
         <img
-          src="src/assets/Header/Light/Center/logo.svg"
+          src="src/assets/icons/logo.svg"
           alt="Premier Markets Logo"
           className="w-[81px] h-[23px]"
         />
 
-        <Input
-          placeholder="Search"
-          icon={<Search className="size-4 text-premier-red" />}
-        />
+        <div className="w-full mt-4">
+          <Input
+            placeholder="Search"
+            icon={<Search className="size-4 text-premier-red" />}
+          />
+
+          <MobileMenuItems />
+        </div>
       </DialogContent>
     </Dialog>
   )
 }
+
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '@/components/ui/accordion'
+
+export function MobileMenuItems() {
+  return (
+    <Accordion
+      type="single"
+      collapsible
+      className="w-full mt-2"
+      defaultValue={navigationItems[0]?.menuName}
+    >
+      {navigationItems.map((item) => (
+        <AccordionItem key={item.menuName} value={item.menuName}>
+          <AccordionTrigger className="text-[17px] h-[54px]">
+            {item.menuName}
+          </AccordionTrigger>
+          <AccordionContent className="flex flex-col gap-4 w-full">
+            <p>{item.dummyText}</p>
+          </AccordionContent>
+        </AccordionItem>
+      ))}
+
+      <a className="flex justify-between gap-2 mt-4">
+        <p className="text-premier-red font-bold">Partner with us</p>
+        <img src="src/assets/icons/arrow-right.svg" alt="arrow down icon" />
+      </a>
+
+      <Button
+        variant="neutralRed"
+        size="lg"
+        className="w-full mt-16 flex items-center justify-center gap-2 py-3"
+      >
+        <p className="inline-flex h-full items-center text-premier-red">
+          Personal
+        </p>
+        <p className="text-[#D6D6D6]">|</p>
+        <a>Institutional</a>
+      </Button>
+
+      <div className="flex items-center justify-center gap-3 mt-14 font-gilroy font-regular text-[14px]">
+        <a>WebTrader</a>
+        <p className="text-[#D6D6D6]">|</p>
+        <a>Support</a>
+        <p className="text-[#D6D6D6]">|</p>
+        <a> Open Demo</a>
+        <p className="text-[#D6D6D6]">|</p>
+      </div>
+
+      <Button size="lg" className="font-bold w-full mt-12">
+        Register
+      </Button>
+
+      <Button size="lg" variant="destructive" className="font-bold w-full mt-4">
+        Register
+      </Button>
+    </Accordion>
+  )
+}
+
 
 export default Header

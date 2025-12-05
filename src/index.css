@@ -46,7 +46,8 @@
 @theme {
   --color-premier-red: #ed1d25;
   --color-premier-black: #010205;
-  --premier-grey: #A8A6B1;
+  --color-premier-grey: #A8A6B1;
+  --color-premier-neutral: #FFE6E7;
 }
 
 @layer base {
