@@ -29,11 +29,9 @@ const MobileNavigation = () => {
     <nav className="h-[63px] flex items-center justify-center bg-white">
       <div className="mx-8 w-full flex items-center justify-between">
         <div className="flex gap-2">
-          <img
-            src="src/assets/menu/outline/menu/outline/menu-line-horizontal.svg"
-            alt="Menu Items"
-            className="w-6 h-6"
-          />
+          <div className="w-6 h-6 flex items-center justify-center">
+            <MobileNavigationMenu />
+          </div>
 
           <img
             src="src/assets/Header/Light/Center/logo.svg"
@@ -52,6 +50,57 @@ const MobileNavigation = () => {
         </div>
       </div>
     </nav>
+  )
+}
+
+const MobileNavigationMenu = () => {
+  return (
+    <DropdownMenu>
+      <DropdownMenuTrigger asChild>
+        <NavButton variant="navButton" className="text-[16px] font-weight-100">
+          <img
+            src="src/assets/menu/outline/menu/outline/menu-line-horizontal.svg"
+            alt="Menu Items"
+            className="w-6 h-6"
+          />
+        </NavButton>
+      </DropdownMenuTrigger>
+
+      <MobileMenuItems />
+    </DropdownMenu>
+  )
+}
+
+const MobileMenuItems = () => {
+  return (
+    <DropdownMenuContent className="min-w-screen border-none">
+      {navigationItems.map((menu) => (
+        <DropdownMenuItem
+          key={menu.menuName}
+          className="flex flex-col items-start justify-between gap-6 w-full pl-8 pr-16 py-4"
+        >
+          <p className="font-bold text-[18px] text-premier-red">{menu.title}</p>
+
+          {menu.items.map((item) => (
+            <a
+              key={item}
+              className="list-none w-full flex flex-row items-center justify-start gap-4"
+            >
+              <div className="w-[22px] h-[22px] bg-[#FFF5F5] inline-flex items-center justify-center">
+                <img
+                  src="src/assets/icons/GraphAscend.svg"
+                  alt="Premier Markets Logo"
+                />
+              </div>
+
+              <p key={item} className="text-[18px]">
+                {item}
+              </p>
+            </a>
+          ))}
+        </DropdownMenuItem>
+      ))}
+    </DropdownMenuContent>
   )
 }
 
