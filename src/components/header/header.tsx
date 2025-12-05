@@ -65,12 +65,19 @@ const BottomNavigationBar = () => {
 
       <NavigationMenu />
 
-      <NavButton
-        variant="redShadow"
-        className="bg-premier-red px-6 py-3 text-white"
-      >
-        Register
-      </NavButton>
+      <div className="flex justify-center items-center gap-6">
+        <NavButton
+          variant="redShadow"
+          className="bg-premier-red px-6 py-3 text-white"
+        >
+          Register
+        </NavButton>
+        <img
+          src="src/assets/Header/Light/Center/User.svg"
+          alt="Premier Markets Logo"
+          className="w-6 h-[25px]"
+        />
+      </div>
     </nav>
   )
 }
