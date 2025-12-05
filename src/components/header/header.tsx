@@ -10,15 +10,13 @@ import { navigationItems } from './navigationItems'
 const Header = () => {
   return (
     <section className="h-[130px] ">
-      <HeaderTopBar />
+      <TopHeaderBar />
       <BottomNavigationBar />
     </section>
   )
 }
 
-
-
-const HeaderTopBar = () => {
+const TopHeaderBar = () => {
   return (
     <div className="h-10 border-b border border-[#C9C9C9] px-[60px]">
       <div className="flex flex-row justify-between items-center h-full">
