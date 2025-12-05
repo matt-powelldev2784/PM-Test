@@ -211,10 +211,12 @@ const MobileMenu = () => {
           className="w-[81px] h-[23px]"
         />
 
-        <Input
-          placeholder="Search"
-          icon={<Search className="size-4 text-premier-red" />}
-        />
+        <div className="w-full mt-4">
+          <Input
+            placeholder="Search"
+            icon={<Search className="size-4 text-premier-red" />}
+          />
+        </div>
       </DialogContent>
     </Dialog>
   )
