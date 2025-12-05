@@ -50,7 +50,7 @@ function Input({
   return (
     <div className="relative w-full">
       {icon && (
-        <span className="pointer-events-none absolute inset-y-0 left-3 flex items-center text-muted-foreground [&_*]:size-6">
+        <span className="pointer-events-none absolute inset-y-0 left-3 flex items-center text-muted-foreground **:size-6">
           {icon}
         </span>
       )}

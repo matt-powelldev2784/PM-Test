@@ -7,19 +7,16 @@ import {
 
 import {
   Dialog,
-  DialogClose,
   DialogContent,
-  DialogDescription,
-  DialogFooter,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
 } from '@/components/ui/dialog'
 import { navigationItems } from './navigationItems'
-import Button from '../ui/Button'
 import menuIcon from '@/assets/menu/outline/menu/outline/menu-line-horizontal.svg'
 import { Input } from '../ui/input'
 import { Search } from 'lucide-react'
+import Button from '../ui/button'
 
 const Header = () => {
   return (
