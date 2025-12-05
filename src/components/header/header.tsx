@@ -9,10 +9,49 @@ import { navigationItems } from './navigationItems'
 
 const Header = () => {
   return (
-    <section className="h-[130px] ">
-      <TopHeaderBar />
-      <BottomNavigationBar />
-    </section>
+    <>
+      {/* Desktop Header */}
+      <section className="hidden xl:block h-[130px]">
+        <TopHeaderBar />
+        <BottomNavigationBar />
+      </section>
+
+      {/* Mobile Header */}
+      <section className="block xl:hidden h-[62px]">
+        <MobileNavigation />
+      </section>
+    </>
+  )
+}
+
+const MobileNavigation = () => {
+  return (
+    <nav className="h-[63px] flex items-center justify-center bg-white">
+      <div className="mx-8 w-full flex items-center justify-between">
+        <div className="flex gap-2">
+          <img
+            src="src/assets/menu/outline/menu/outline/menu-line-horizontal.svg"
+            alt="Menu Items"
+            className="w-6 h-6"
+          />
+
+          <img
+            src="src/assets/Header/Light/Center/logo.svg"
+            alt="Premier Markets Logo"
+            className="w-[81px] h-[23px]"
+          />
+        </div>
+
+        <div className="flex items-center justify-center">
+          <img
+            src="src/assets/Header/Light/Center/united-kingdom.png"
+            alt="flag icon"
+            className="w-[30px] h-[30px]"
+          />
+          <p className="text-[12px] font-gilroy">EN</p>
+        </div>
+      </div>
+    </nav>
   )
 }
 
@@ -43,7 +82,7 @@ const TopHeaderBar = () => {
                 alt="flag icon"
                 className="w-[30px] h-[30px]"
               />
-              <p className="font-[12px]">EN</p>
+              <p className="text-[12px]">EN</p>
             </div>
           </div>
         </div>
