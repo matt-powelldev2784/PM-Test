@@ -216,10 +216,42 @@ const MobileMenu = () => {
             placeholder="Search"
             icon={<Search className="size-4 text-premier-red" />}
           />
+
+          <MobileMenuItems />
         </div>
       </DialogContent>
     </Dialog>
   )
 }
+
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '@/components/ui/accordion'
+
+export function MobileMenuItems() {
+  return (
+    <Accordion
+      type="single"
+      collapsible
+      className="w-full"
+      defaultValue={navigationItems[0]?.menuName ?? ''}
+    >
+      {navigationItems.map((item) => (
+        <AccordionItem key={item.menuName} value={item.menuName}>
+          <AccordionTrigger className="font-bold text-[17px] ">
+            {item.menuName}
+          </AccordionTrigger>
+          <AccordionContent className="flex flex-col gap-4 w-full">
+            <p>{item.dummyText}</p>
+          </AccordionContent>
+        </AccordionItem>
+      ))}
+    </Accordion>
+  )
+}
+
 
 export default Header

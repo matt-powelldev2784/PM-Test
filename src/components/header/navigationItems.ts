@@ -9,6 +9,8 @@ export const navigationItems = [
       'Deposits and Withdrawals',
       'Social Media',
     ],
+    dummyText:
+      'Lorem ipsum dolor sit at, consectetur adjacent title typed lots text handover lorem ipsum dolor sit at.',
   },
   {
     menuName: 'Discover',
@@ -20,6 +22,8 @@ export const navigationItems = [
       'Deposits and Withdrawals',
       'Social Media',
     ],
+    dummyText:
+      'Lorem ipsum dolor sit at, consectetur adjacent title typed lots text handover lorem ipsum dolor sit at.',
   },
   {
     menuName: 'Promotions',
@@ -31,6 +35,8 @@ export const navigationItems = [
       'Deposits and Withdrawals',
       'Social Media',
     ],
+    dummyText:
+      'Lorem ipsum dolor sit at, consectetur adjacent title typed lots text handover lorem ipsum dolor sit at.',
   },
   {
     menuName: 'Company',
@@ -42,5 +48,7 @@ export const navigationItems = [
       'Deposits and Withdrawals',
       'Social Media',
     ],
+    dummyText:
+      'Lorem ipsum dolor sit at, consectetur adjacent title typed lots text handover lorem ipsum dolor sit at.',
   },
 ]
