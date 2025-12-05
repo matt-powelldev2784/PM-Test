@@ -191,12 +191,8 @@ const MobileMenu = () => {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button
-          variant="navButton"
-          aria-label="Open menu"
-          className="h-10 w-10 p-0 items-center justify-center"
-        >
-          <img src={menuIcon} alt="" className="h-6 w-6" />
+        <Button variant="navButton" aria-label="Open menu">
+          <img src={menuIcon} alt="open menu icon" className="h-6 w-6" />
         </Button>
       </DialogTrigger>
 
@@ -236,12 +232,12 @@ export function MobileMenuItems() {
     <Accordion
       type="single"
       collapsible
-      className="w-full"
-      defaultValue={navigationItems[0]?.menuName ?? ''}
+      className="w-full mt-2"
+      defaultValue={navigationItems[0]?.menuName}
     >
       {navigationItems.map((item) => (
         <AccordionItem key={item.menuName} value={item.menuName}>
-          <AccordionTrigger className="font-bold text-[17px] ">
+          <AccordionTrigger className="text-[17px] h-[54px]">
             {item.menuName}
           </AccordionTrigger>
           <AccordionContent className="flex flex-col gap-4 w-full">
@@ -249,6 +245,40 @@ export function MobileMenuItems() {
           </AccordionContent>
         </AccordionItem>
       ))}
+
+      <a className="flex justify-between gap-2 mt-4">
+        <p className="text-premier-red font-bold">Partner with us</p>
+        <img src="src/assets/icons/arrow-right.svg" alt="arrow down icon" />
+      </a>
+
+      <Button
+        variant="neutralRed"
+        size="lg"
+        className="w-full mt-16 flex items-center justify-center gap-2 py-3"
+      >
+        <p className="inline-flex h-full items-center text-premier-red">
+          Personal
+        </p>
+        <p className="text-[#D6D6D6]">|</p>
+        <a>Institutional</a>
+      </Button>
+
+      <div className="flex items-center justify-center gap-3 mt-14 font-gilroy font-regular text-[14px]">
+        <a>WebTrader</a>
+        <p className="text-[#D6D6D6]">|</p>
+        <a>Support</a>
+        <p className="text-[#D6D6D6]">|</p>
+        <a> Open Demo</a>
+        <p className="text-[#D6D6D6]">|</p>
+      </div>
+
+      <Button size="lg" className="font-bold w-full mt-12">
+        Register
+      </Button>
+
+      <Button size="lg" variant="destructive" className="font-bold w-full mt-4">
+        Register
+      </Button>
     </Accordion>
   )
 }
