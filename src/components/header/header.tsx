@@ -227,12 +227,7 @@ import {
 
 export function MobileMenuItems() {
   return (
-    <Accordion
-      type="single"
-      collapsible
-      className="w-full mt-2"
-      defaultValue={navigationItems[0]?.menuName}
-    >
+    <Accordion type="single" collapsible className="w-full mt-2">
       {navigationItems.map((item) => (
         <AccordionItem key={item.menuName} value={item.menuName}>
           <AccordionTrigger className="text-[17px] h-[54px]">
