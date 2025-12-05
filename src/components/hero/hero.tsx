@@ -9,11 +9,15 @@ const Hero = () => {
       <img
         src="src/assets/icons/hero-clip-path.svg"
         alt="arrow down icon"
-        className="absolute bottom-0"
+        className="absolute bottom-0 w-full object-fit"
       />
 
       {/* Content Container */}
-      <div className="absolute">123</div>
+      <div className="absolute">
+        <p className="font-gilroy text-white text-[70px] leading-[102%] absolute top-[101px] left-[115px] w-[515px] h-[202px]">
+          Trade Forex with Premier Markets
+        </p>
+      </div>
     </section>
   )
 }
