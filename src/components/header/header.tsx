@@ -35,67 +35,7 @@ const Header = () => {
   )
 }
 
-const MobileNavigation = () => {
-  return (
-    <nav className="h-[63px] flex items-center justify-center bg-white">
-      <div className="mx-8 w-full flex items-center justify-between">
-        <div className="flex gap-2">
-          <div className="w-6 h-6 flex items-center justify-center">
-            <MobileMenu />
-          </div>
 
-          <img
-            src="src/assets/Header/Light/Center/logo.svg"
-            alt="Premier Markets Logo"
-            className="w-[81px] h-[23px]"
-          />
-        </div>
-
-        <div className="flex items-center justify-center">
-          <img
-            src="src/assets/Header/Light/Center/united-kingdom.png"
-            alt="flag icon"
-            className="w-[30px] h-[30px]"
-          />
-          <p className="text-[12px] font-gilroy">EN</p>
-        </div>
-      </div>
-    </nav>
-  )
-}
-
-const MobileMenu = () => {
-  return (
-    <Dialog>
-      <DialogTrigger asChild>
-        <Button
-          variant="navButton"
-          aria-label="Open menu"
-          className="h-10 w-10 p-0 items-center justify-center"
-        >
-          <img src={menuIcon} alt="" className="h-6 w-6" />
-        </Button>
-      </DialogTrigger>
-
-      <DialogContent className="flex flex-col items-start left-0 top-0 z-50 py-4 px-5 h-screen w-[90vw] max-w-none translate-x-0 translate-y-0 rounded-none border-0 shadow-none">
-        <DialogHeader className="sr-only">
-          <DialogTitle>Edit profile</DialogTitle>
-        </DialogHeader>
-
-        <img
-          src="src/assets/Header/Light/Center/logo.svg"
-          alt="Premier Markets Logo"
-          className="w-[81px] h-[23px]"
-        />
-
-        <Input
-          placeholder="Search"
-          icon={<Search className="size-4 text-premier-red" />}
-        />
-      </DialogContent>
-    </Dialog>
-  )
-}
 
 const TopHeaderBar = () => {
   return (
@@ -221,6 +161,68 @@ const MenuItems = ({ title, items }: MenuDropDownProps) => {
         ))}
       </DropdownMenuItem>
     </DropdownMenuContent>
+  )
+}
+
+const MobileNavigation = () => {
+  return (
+    <nav className="h-[63px] flex items-center justify-center bg-white">
+      <div className="mx-8 w-full flex items-center justify-between">
+        <div className="flex gap-2">
+          <div className="w-6 h-6 flex items-center justify-center">
+            <MobileMenu />
+          </div>
+
+          <img
+            src="src/assets/Header/Light/Center/logo.svg"
+            alt="Premier Markets Logo"
+            className="w-[81px] h-[23px]"
+          />
+        </div>
+
+        <div className="flex items-center justify-center">
+          <img
+            src="src/assets/Header/Light/Center/united-kingdom.png"
+            alt="flag icon"
+            className="w-[30px] h-[30px]"
+          />
+          <p className="text-[12px] font-gilroy">EN</p>
+        </div>
+      </div>
+    </nav>
+  )
+}
+
+const MobileMenu = () => {
+  return (
+    <Dialog>
+      <DialogTrigger asChild>
+        <Button
+          variant="navButton"
+          aria-label="Open menu"
+          className="h-10 w-10 p-0 items-center justify-center"
+        >
+          <img src={menuIcon} alt="" className="h-6 w-6" />
+        </Button>
+      </DialogTrigger>
+
+      <DialogContent className="flex flex-col items-start left-0 top-0 z-50 py-4 px-5 h-screen w-[90vw] max-w-none translate-x-0 translate-y-0 rounded-none border-0 shadow-none">
+        <DialogHeader className="sr-only">
+          <DialogTitle>Edit profile</DialogTitle>
+        </DialogHeader>
+
+        <img
+          src="src/assets/Header/Light/Center/logo.svg"
+          alt="Premier Markets Logo"
+          className="w-[81px] h-[23px]"
+        />
+
+        <Input
+          placeholder="Search"
+          icon={<Search className="size-4 text-premier-red" />}
+        />
+      </DialogContent>
+    </Dialog>
   )
 }
 
