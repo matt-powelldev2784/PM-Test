@@ -68,27 +68,29 @@ const MobileNavigation = () => {
 const MobileMenu = () => {
   return (
     <Dialog>
-      <form>
-        <DialogTrigger asChild>
-          <Button
-            variant="navButton"
-            aria-label="Open menu"
-            className="h-10 w-10 p-0 items-center justify-center"
-          >
-            <img src={menuIcon} alt="" className="h-6 w-6" />
-          </Button>
-        </DialogTrigger>
+      <DialogTrigger asChild>
+        <Button
+          variant="navButton"
+          aria-label="Open menu"
+          className="h-10 w-10 p-0 items-center justify-center"
+        >
+          <img src={menuIcon} alt="" className="h-6 w-6" />
+        </Button>
+      </DialogTrigger>
 
-        <DialogContent className="sm:max-w-[425px]">
-          <div className="grid gap-4">
-            <p>test</p>
-          </div>
+      <DialogContent className="flex flex-col items-start left-0 top-0 z-50 py-4 px-5 h-screen w-[90vw] max-w-none translate-x-0 translate-y-0 rounded-none border-0 shadow-none">
+        <DialogHeader className="sr-only">
+          <DialogTitle>Edit profile</DialogTitle>
+        </DialogHeader>
 
-          <DialogClose asChild>
-            <Button variant="outline">Cancel</Button>
-          </DialogClose>
-        </DialogContent>
-      </form>
+        <img
+          src="src/assets/Header/Light/Center/logo.svg"
+          alt="Premier Markets Logo"
+          className="w-[81px] h-[23px]"
+        />
+
+        <p>test</p>
+      </DialogContent>
     </Dialog>
   )
 }
