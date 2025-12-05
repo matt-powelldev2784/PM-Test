@@ -60,7 +60,7 @@ const TopHeaderBar = () => {
 
             <div className="flex items-center justify-center">
               <img
-                src="src/assets/Header/Light/Center/united-kingdom.png"
+                src="src/assets/icons/united-kingdom.png"
                 alt="flag icon"
                 className="w-[30px] h-[30px]"
               />
@@ -77,7 +77,7 @@ const BottomNavigationBar = () => {
   return (
     <nav className="px-[60px] h-[90px] flex items-center justify-between">
       <img
-        src="src/assets/Header/Light/Center/logo.svg"
+        src="src/assets/icons/logo.svg"
         alt="Premier Markets Logo"
         className="w-40 h-[45px]"
       />
@@ -92,7 +92,7 @@ const BottomNavigationBar = () => {
           Register
         </Button>
         <img
-          src="src/assets/Header/Light/Center/User.svg"
+          src="src/assets/icons/User.svg"
           alt="Premier Markets Logo"
           className="w-6 h-[25px]"
         />
@@ -109,10 +109,7 @@ export function NavigationMenu() {
           <DropdownMenuTrigger asChild>
             <Button variant="navButton" className="text-[16px] font-weight-100">
               {menu.menuName}
-              <img
-                src="src/assets/Header/Light/Center/Chevron.svg"
-                alt="arrow down icon"
-              />
+              <img src="src/assets/icons/chevron.svg" alt="arrow down icon" />
             </Button>
           </DropdownMenuTrigger>
 
@@ -122,10 +119,7 @@ export function NavigationMenu() {
 
       <a className="flex gap-2">
         <p className="text-premier-red">Partner with us</p>
-        <img
-          src="src/assets/Header/Light/Center/Arrow Right.svg"
-          alt="arrow down icon"
-        />
+        <img src="src/assets/icons/arrow-right.svg" alt="arrow down icon" />
       </a>
     </div>
   )
@@ -174,7 +168,7 @@ const MobileNavigation = () => {
           </div>
 
           <img
-            src="src/assets/Header/Light/Center/logo.svg"
+            src="src/assets/icons/logo.svg"
             alt="Premier Markets Logo"
             className="w-[81px] h-[23px]"
           />
@@ -182,7 +176,7 @@ const MobileNavigation = () => {
 
         <div className="flex items-center justify-center">
           <img
-            src="src/assets/Header/Light/Center/united-kingdom.png"
+            src="src/assets/icons/united-kingdom.png"
             alt="flag icon"
             className="w-[30px] h-[30px]"
           />
@@ -212,7 +206,7 @@ const MobileMenu = () => {
         </DialogHeader>
 
         <img
-          src="src/assets/Header/Light/Center/logo.svg"
+          src="src/assets/icons/logo.svg"
           alt="Premier Markets Logo"
           className="w-[81px] h-[23px]"
         />
