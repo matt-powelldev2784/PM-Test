@@ -13,7 +13,7 @@ import {
   DialogTrigger,
 } from '@/components/ui/dialog'
 import { navigationItems } from './navigationItems'
-import menuIcon from '@/assets/menu/outline/menu/outline/menu-line-horizontal.svg'
+import menuIcon from '@/assets/icons/menu-line-horizontal.svg'
 import { Input } from '../ui/input'
 import { Search } from 'lucide-react'
 import Button from '../ui/button'
