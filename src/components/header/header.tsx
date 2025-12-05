@@ -18,6 +18,8 @@ import {
 import { navigationItems } from './navigationItems'
 import Button from '../ui/Button'
 import menuIcon from '@/assets/menu/outline/menu/outline/menu-line-horizontal.svg'
+import { Input } from '../ui/input'
+import { Search } from 'lucide-react'
 
 const Header = () => {
   return (
@@ -89,7 +91,10 @@ const MobileMenu = () => {
           className="w-[81px] h-[23px]"
         />
 
-        <p>test</p>
+        <Input
+          placeholder="Search"
+          icon={<Search className="size-4 text-premier-red" />}
+        />
       </DialogContent>
     </Dialog>
   )
