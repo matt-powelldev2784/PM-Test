@@ -72,7 +72,7 @@ const MobileHero = () => {
       <div className="absolute w-full h-[667px] bg-[linear-gradient(360deg,#ED1D25_100%,#ED1D2500_0%)] opacity-40"></div>
 
       {/* Content Container */}
-      <div className="relative w-full flex flex-col items-center justify-start border-2 border-blue-500">
+      <div className="relative w-full flex flex-col items-center justify-start">
         <p className="font-gilroy text-white text-[40px] leading-[103%] tracking-[-0.03em] mt-8 px-14 text-center">
           Trade CFDs with Premier Markets
         </p>
