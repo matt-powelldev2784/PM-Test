@@ -1,13 +1,13 @@
 import Header from '@/components/header/header'
 import Hero from '@/components/hero/hero'
-import HeroPrices from '@/components/heroPrices/heroPrices'
+import ForexCarousel from '@/components/ForexCarousel/ForexCarousel'
 
 function App() {
   return (
     <>
       <Header />
       <Hero />
-      <HeroPrices />
+      <ForexCarousel />
     </>
   )
 }
