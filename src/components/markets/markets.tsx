@@ -8,6 +8,7 @@ import arrowSquare from '@/assets/images/arrow-square.svg'
 import arrowBottomRight from '@/assets/images/arrow-bottom-right.png'
 import arrowTopRight from '@/assets/images/arrow-top-right.png'
 import graph from '@/assets/images/graph-red.svg'
+import infoIcon from '@/assets/images/info.svg'
 
 const Markets = () => {
   return (
@@ -21,15 +22,56 @@ const Markets = () => {
 
       <MarketButtons />
 
-      <section className="w-[1048px] flex flex-row gap-6 mt-12 ">
-        <TradeButtons />
+      <RightSection />
+    </section>
+  )
+}
 
-        <div className="flex flex-col items-start gap-10 ">
+const RightSection = () => {
+  return (
+    <section className="w-[1048px] flex flex-row gap-6 mt-12 ">
+      <TradeButtons />
+
+      <div className="flex flex-col items-start gap-10 ">
+        <div className="flex gap-6">
           <GoldBanner />
 
-          <img src={graph} alt="market graph" className="" />
+          <div className="bg-[#F9F9F9] w-[186px] h-[66px] flex flex-row items-center justify-center text-[10px] gap-4 rounded-xl">
+            <div>
+              <p>
+                Buyers
+                <span className="ml-1 text-bold bg-gray-200 rounded p-0.5">
+                  66.93%
+                </span>
+              </p>
+              <p className="mt-2">
+                Seller{' '}
+                <span className="ml-1.5 text-bold bg-gray-200 rounded p-0.5">
+                  66.93%
+                </span>
+              </p>
+            </div>
+
+            <div className="">
+              <p className="text-green-500">Low: 3686.38</p>
+              <p className="mt-2 text-red-500">High 3788.96</p>
+            </div>
+          </div>
         </div>
-      </section>
+
+        <img src={graph} alt="market graph" />
+
+        <div className="flex gap-2 items-center justify-center -translate-y-4">
+          <img
+            src={infoIcon}
+            alt="market graph"
+            className="w-3 h-3"
+          />
+          <p className="text-[12px] text-[#B9B9B9]">
+            Past performance is not a reliable indicator of future results
+          </p>
+        </div>
+      </div>
     </section>
   )
 }
