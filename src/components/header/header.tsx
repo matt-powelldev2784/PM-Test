@@ -193,9 +193,9 @@ const MobileMenu = () => {
         </Button>
       </DialogTrigger>
 
-      <DialogContent className="flex flex-col items-start left-0 top-0 z-50 py-4 px-5 h-screen w-[90vw] max-w-none translate-x-0 translate-y-0 rounded-none border-0 shadow-none">
+      <DialogContent className="flex flex-col items-start overflow-y-auto left-0 top-0 z-50 py-4 px-5 h-screen w-[90vw] max-w-none translate-x-0 translate-y-0 rounded-none border-0 shadow-none">
         <DialogHeader className="sr-only">
-          <DialogTitle>Edit profile</DialogTitle>
+          <DialogTitle>Mobile Menu</DialogTitle>
         </DialogHeader>
 
         <img
