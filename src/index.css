@@ -68,10 +68,6 @@
   }
 }
 
-.clip-wave {
-  clip-path: path("M0% 100% C25% 150% 75% 50% 100% 100% L100% 0% L0% 0% Z");
-}
-
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
