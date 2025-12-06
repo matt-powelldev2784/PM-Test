@@ -1,3 +1,5 @@
+import Button from '../ui/button'
+
 const Hero = () => {
   return (
     <section className="relative bg-red-500 h-[751px]">
@@ -9,7 +11,7 @@ const Hero = () => {
       <img
         src="src/assets/images/hero-clip-path.svg"
         alt="arrow down icon"
-        className="absolute bottom-0 w-full object-fit"
+        className="absolute bottom-0 w-full object-fit z-10"
       />
 
       {/* Content Container */}
@@ -25,6 +27,30 @@ const Hero = () => {
           spreads, and institutional grade execution.
         </p>
       </div>
+
+      <div className="absolute left-[115px] top-[445px] flex gap-12">
+        <Button
+          variant="white"
+          size="lg"
+          className="h-[53px] w-[164px] rounded-3xl text-[16px] font-semibold"
+        >
+          Start Trading
+        </Button>
+
+        <Button
+          variant="outline"
+          size="lg"
+          className="h-[53px] w-[200px] rounded-3xl text-[16px] font-semibold bg-transparent border-white text-white border-2"
+        >
+          Try Demo Account
+        </Button>
+      </div>
+
+      <img
+        src="src/assets/images/hero_phone_lg.webp"
+        alt="arrow down icon"
+        className="absolute top-[100px] left-[818px]"
+      />
     </section>
   )
 }
