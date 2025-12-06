@@ -69,7 +69,7 @@ const MarketsMobile = () => {
           <img
             src={chevronDown}
             alt="arrow down icon"
-            className="w-5 h-5 absolute right-6 top-3 text-white"
+            className="w-5 h-5 absolute right-6 top-2.5 text-white"
           />
         </Button>
 
