@@ -45,3 +45,42 @@ export const tradeButtonData = [
     selected: false,
   },
 ]
+
+export const tradeButtonDataMobile = [
+  {
+    key: 1,
+    id: 1,
+    shortName: 'BTC',
+    fullName: 'Bitcoin',
+    price: '₽ 524,0',
+    change: '+3.25%',
+    selected: true,
+  },
+  {
+    key: 2,
+    id: 2,
+    shortName: 'BTC',
+    fullName: 'Bitcoin',
+    price: '₽ 524,0',
+    change: '+3.25%',
+    selected: false,
+  },
+  {
+    key: 3,
+    id: 3,
+    shortName: 'BTC',
+    fullName: 'Bitcoin',
+    price: '₽ 524,0',
+    change: '+3.25%',
+    selected: false,
+  },
+  {
+    key: 4,
+    id: 4,
+    shortName: 'BTC',
+    fullName: 'Bitcoin',
+    price: '₽ 524,0',
+    change: '+3.25%',
+    selected: false,
+  },
+]

@@ -1,6 +1,6 @@
 import Button from '../ui/button'
 import cryptoIcon from '@/assets/images/crypto-logo.svg'
-import { tradeButtonData } from './tradeButtonData'
+import { tradeButtonData, tradeButtonDataMobile } from './tradeButtonData'
 import { cn } from '@/lib/utils'
 import { useState } from 'react'
 import { marketButtonData } from './marketButtonData'
@@ -9,11 +9,13 @@ import arrowBottomRight from '@/assets/images/arrow-bottom-right.png'
 import arrowTopRight from '@/assets/images/arrow-top-right.png'
 import graph from '@/assets/images/graph-red.svg'
 import infoIcon from '@/assets/images/info.svg'
+import chevronDown from '@/assets/images/chevron-down-white.svg'
 
 const Markets = () => {
   return (
     <>
       <MarketsDesktop />
+      <MarketsMobile />
     </>
   )
 }
@@ -44,6 +46,120 @@ const MarketsDesktop = () => {
     </section>
   )
 }
+
+const MarketsMobile = () => {
+  return (
+    <section className="h-[547px] flex xl:hidden flex-col items-center justify-start w-full pb-16">
+      <div className="w-[289px] flex flex-col items-center justify-start">
+        <p className="font-gilroy font-bold text-[32px] text-premier-red-market mt-8">
+          Our <span className="text-premier-black">Markets</span>
+        </p>
+
+        <p className="text-[16px]/4.75 mt-2 text-premier-grey max-w-[30ch] text-center">
+          Stay informed with the data that matters, on 17,000+ markets. Get the
+          latest news, trader sentiment, spreads, price action and much more.
+        </p>
+
+        <Button
+          variant="redRounded"
+          className="relative h-[39px] w-full rounded-3xl text-[16px] font-semibold mt-6 flex justify-between"
+        >
+          <p className="ml-2">Most Traded</p>
+
+          <img
+            src={chevronDown}
+            alt="arrow down icon"
+            className="w-5 h-5 absolute right-6 top-3 text-white"
+          />
+        </Button>
+
+        <div className="flex flex-col items-center justify-start mt-4 gap-2">
+          {tradeButtonDataMobile.map(({ key, ...trade }) => (
+            <TradeButtonMobile key={key} {...trade} />
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
+type TradeButtonMobileProps = {
+  shortName: string
+  fullName: string
+  price: string
+  change: string
+  selected: boolean
+}
+
+const TradeButtonMobile = ({
+  shortName,
+  fullName,
+  price,
+  change,
+  selected,
+}: TradeButtonMobileProps) => {
+  return (
+    <Button
+      className={cn(
+        'w-[269px] h-[51px] flex justify-between rounded-xl transition-colors shadow-md shadow-grey-500/40 px-4 py-3',
+        selected
+          ? 'border-2 border-[#FFA7AA] bg-[linear-gradient(160deg,#ED1D25,#871115)]'
+          : 'border border-premier-grey/50 bg-white'
+      )}
+    >
+      <div className="flex items-center gap-7">
+        <img src={cryptoIcon} alt="flag icon" className="w-[26px] h-[26px]" />
+
+        <div className="flex flex-col items-start justify-center">
+          <p
+            className={cn(
+              'text-[14px] tracking-wide transition-colors font-semibold',
+              selected ? 'text-white' : 'text-black'
+            )}
+          >
+            {shortName}
+          </p>
+          <p
+            className={cn(
+              'text-[10px] tracking-wide transition-colors ',
+              selected ? 'text-white' : 'text-gray-700'
+            )}
+          >
+            {fullName}
+          </p>
+        </div>
+      </div>
+
+      <div className="flex justify-between gap-2 w-[120px] ">
+        <p
+          className={cn(
+            'text-[10px] tracking-wide transition-colors font-semibold',
+            selected ? 'text-white/80' : 'text-black'
+          )}
+        >
+          {price}
+        </p>
+
+        <div
+          className={cn(
+            'h-4 w-px',
+            selected ? 'bg-white' : 'bg-premier-black/10'
+          )}
+        />
+
+        <p
+          className={cn(
+            'text-[10px] tracking-wide font-semibold',
+            selected ? 'text-white/80' : 'text-green-600'
+          )}
+        >
+          {change}
+        </p>
+      </div>
+    </Button>
+  )
+}
+
 
 const MarketButtons = () => {
   return (
