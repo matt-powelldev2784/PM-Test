@@ -8,6 +8,11 @@ import {
   CarouselPrevious,
 } from '@/components/ui/carousel'
 import { forexData } from './forexData'
+import heroClipPath from '@/assets/images/hero-clip-path.svg'
+import heroPhoneLarge from '@/assets/images/hero_phone_lg.webp'
+import heroPhoneSmall from '@/assets/images/hero_phone_sm.webp'
+import negativeIcon from '@/assets/images/negative.png'
+import positiveIcon from '@/assets/images/positive.png'
 
 const Hero = () => {
   return (
@@ -27,7 +32,7 @@ const HeroDesktop = () => {
 
       {/* Bottom Clip Path */}
       <img
-        src="src/assets/images/hero-clip-path.svg"
+        src={heroClipPath}
         alt="arrow down icon"
         className="absolute bottom-0 w-full object-fit z-10"
       />
@@ -70,7 +75,7 @@ const HeroDesktop = () => {
       </div>
 
       <img
-        src="src/assets/images/hero_phone_lg.webp"
+        src={heroPhoneLarge}
         alt="phone image"
         className="absolute top-[100px] left-[818px]"
       />
@@ -116,7 +121,7 @@ const MobileHero = () => {
           </div>
 
           <img
-            src="src/assets/images/hero_phone_sm.webp"
+            src={heroPhoneSmall}
             alt="phone image"
             className="absolute -bottom-[11px] left-1/2 -translate-x-1/2 w-[260px]"
           />
@@ -179,9 +184,9 @@ const ForexCard = ({ pair, rate, change, icon }: ForexCardProps) => {
       <p className="text-lg font-semibold text-[14px]">{pair}</p>
 
       {isNegative ? (
-        <img src="src/assets/images/negative.png" alt="negative change icon" />
+        <img src={negativeIcon} alt="negative change icon" />
       ) : (
-        <img src="src/assets/images/positive.png" alt="positive change icon" />
+        <img src={positiveIcon} alt="positive change icon" />
       )}
 
       <div className="flex flex-col gap-1">

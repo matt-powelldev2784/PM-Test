@@ -14,6 +14,12 @@ import {
 } from '@/components/ui/dialog'
 import { navigationItems } from './navigationItems'
 import menuIcon from '@/assets/images/menu-line-horizontal.svg'
+import logo from '@/assets/images/logo.svg'
+import userIcon from '@/assets/images/User.svg'
+import chevronIcon from '@/assets/images/chevron.svg'
+import arrowRightIcon from '@/assets/images/arrow-right.svg'
+import graphAscendIcon from '@/assets/images/GraphAscend.svg'
+import flagUnitedKingdom from '@/assets/images/united-kingdom.png'
 import { Input } from '../ui/input'
 import { Search } from 'lucide-react'
 import Button from '../ui/button'
@@ -58,7 +64,7 @@ const TopHeaderBar = () => {
 
             <div className="flex items-center justify-center">
               <img
-                src="src/assets/images/united-kingdom.png"
+                src={flagUnitedKingdom}
                 alt="flag icon"
                 className="w-[30px] h-[30px]"
               />
@@ -74,11 +80,7 @@ const TopHeaderBar = () => {
 const BottomNavigationBar = () => {
   return (
     <nav className="px-[60px] h-[90px] flex items-center justify-between">
-      <img
-        src="src/assets/images/logo.svg"
-        alt="Premier Markets Logo"
-        className="w-40 h-[45px]"
-      />
+      <img src={logo} alt="Premier Markets Logo" className="w-40 h-[45px]" />
 
       <NavigationMenu />
 
@@ -90,7 +92,7 @@ const BottomNavigationBar = () => {
           Register
         </Button>
         <img
-          src="src/assets/images/User.svg"
+          src={userIcon}
           alt="Premier Markets Logo"
           className="w-6 h-[25px]"
         />
@@ -107,7 +109,7 @@ export function NavigationMenu() {
           <DropdownMenuTrigger asChild>
             <Button variant="navButton" className="text-[16px] font-weight-100">
               {menu.menuName}
-              <img src="src/assets/images/chevron.svg" alt="arrow down icon" />
+              <img src={chevronIcon} alt="arrow down icon" />
             </Button>
           </DropdownMenuTrigger>
 
@@ -117,7 +119,7 @@ export function NavigationMenu() {
 
       <a className="flex gap-2">
         <p className="text-premier-red">Partner with us</p>
-        <img src="src/assets/images/arrow-right.svg" alt="arrow down icon" />
+        <img src={arrowRightIcon} alt="arrow down icon" />
       </a>
     </div>
   )
@@ -140,10 +142,7 @@ const MenuItems = ({ title, items }: MenuDropDownProps) => {
             className="list-none w-full flex flex-row items-center justify-start gap-4"
           >
             <div className="w-[22px] h-[22px] bg-[#FFF5F5] inline-flex items-center justify-center">
-              <img
-                src="src/assets/images/GraphAscend.svg"
-                alt="Premier Markets Logo"
-              />
+              <img src={graphAscendIcon} alt="Premier Markets Logo" />
             </div>
 
             <p key={item} className="text-[18px]">
@@ -166,7 +165,7 @@ const MobileNavigation = () => {
           </div>
 
           <img
-            src="src/assets/images/logo.svg"
+            src={logo}
             alt="Premier Markets Logo"
             className="w-[81px] h-[23px]"
           />
@@ -174,7 +173,7 @@ const MobileNavigation = () => {
 
         <div className="flex items-center justify-center">
           <img
-            src="src/assets/images/united-kingdom.png"
+            src={flagUnitedKingdom}
             alt="flag icon"
             className="w-[30px] h-[30px]"
           />
@@ -200,7 +199,7 @@ const MobileMenu = () => {
         </DialogHeader>
 
         <img
-          src="src/assets/images/logo.svg"
+          src={logo}
           alt="Premier Markets Logo"
           className="w-[81px] h-[23px]"
         />
@@ -241,7 +240,7 @@ export function MobileMenuItems() {
 
       <a className="flex justify-between gap-2 mt-4">
         <p className="text-premier-red font-bold">Partner with us</p>
-        <img src="src/assets/images/arrow-right.svg" alt="arrow down icon" />
+        <img src={arrowRightIcon} alt="arrow down icon" />
       </a>
 
       <Button
