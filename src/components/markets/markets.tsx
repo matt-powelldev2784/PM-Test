@@ -20,7 +20,7 @@ const Markets = () => {
 
 const MarketsDesktop = () => {
   return (
-    <section className="flex flex-col items-center justify-center w-full pb-32">
+    <section className="hidden xl:flex flex-col items-center justify-center w-full pb-32">
       <p className="mt-24 font-gilroy text-center text-[72px]">Our Markets</p>
 
       <p className="text-[18px] max-w-[60ch] text-center text-premier-grey">
