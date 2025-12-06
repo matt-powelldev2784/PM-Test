@@ -1,4 +1,4 @@
-export const data = [
+export const forexData = [
   {
     key: 1,
     pair: 'USD/EUR',
