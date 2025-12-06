@@ -14,7 +14,7 @@ import {
 } from '@/components/ui/dialog'
 import { navigationItems } from './navigationItems'
 import menuIcon from '@/assets/images/menu-line-horizontal.svg'
-import logo from '@/assets/images/logo.svg'
+import logo from '@/assets/images/premier-logo.svg'
 import userIcon from '@/assets/images/User.svg'
 import chevronIcon from '@/assets/images/chevron.svg'
 import arrowRightIcon from '@/assets/images/arrow-right.svg'
