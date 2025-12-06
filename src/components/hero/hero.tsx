@@ -86,18 +86,18 @@ const HeroDesktop = () => {
 const MobileHero = () => {
   return (
     <section className="xl:hidden overflow-hidden">
-      <div className="relative bg-red-500 h-[667px] flex ">
+      <div className="relative bg-red-500 h-[677px] flex">
         {/* Background Gradients */}
-        <div className="absolute w-full h-[667px] bg-[linear-gradient(360deg,#320002_0%,#900006_33%,#ED1D25_100%)]"></div>
-        <div className="absolute w-full h-[667px] bg-[linear-gradient(360deg,#ED1D25_100%,#ED1D2500_0%)] opacity-40"></div>
+        <div className="absolute w-full h-[677px] bg-[linear-gradient(360deg,#320002_0%,#900006_33%,#ED1D25_100%)]"></div>
+        <div className="absolute w-full h-[677px] bg-[linear-gradient(360deg,#ED1D25_100%,#ED1D2500_0%)] opacity-40"></div>
 
         {/* Content Container */}
-        <div className="relative w-full flex flex-col items-center justify-start overflow-hidden">
-          <p className="font-gilroy text-white text-[40px] leading-[103%] tracking-[-0.03em] mt-8 px-14 text-center">
+        <div className="relative w-full flex flex-col items-center justify-start overflow-hidden mt-4">
+          <p className="font-gilroy text-white text-[40px] leading-[103%] tracking-[-0.03em] mt-8 max-w-[10ch] text-center">
             Trade CFDs with Premier Markets
           </p>
 
-          <p className="text-white text-[16px] leading-[120%] text-center px-12 mt-4">
+          <p className="text-white text-[16px] leading-[120%] text-center max-w-[30ch] mt-4">
             Access global markets with advanced trading tools, competitive
             spreads, and institutional grade execution.
           </p>
@@ -136,14 +136,14 @@ const MobileHero = () => {
 
 const ForexCarousel = () => {
   return (
-    <section className="flex items-center justify-center w-full h-[120px] xl:translate-y-[5px] px-0 xl:px-8 bg-white">
+    <section className="flex items-center justify-center w-full h-[120px] xl:translate-y-[5px] px-0 xl:px-8 bg-white ">
       <Carousel
         opts={{
           align: 'center',
         }}
         className="w-full"
       >
-        <CarouselContent className="pb-6">
+        <CarouselContent className="pb-2 xl:pb-6">
           {forexData.map(({ key, ...forexCardProps }) => (
             <CarouselItem
               key={key}
