@@ -101,7 +101,7 @@ const BottomNavigationBar = () => {
 
 export function NavigationMenu() {
   return (
-    <div className="w-full mx-auto flex items-center justify-center gap-3">
+    <div className="w-8/12 mx-auto flex items-center justify-center gap-3">
       {navigationItems.map((menu) => (
         <DropdownMenu key={menu.menuName}>
           <DropdownMenuTrigger asChild>

@@ -131,7 +131,7 @@ const MobileHero = () => {
 
 const ForexCarousel = () => {
   return (
-    <section className="flex items-center justify-center w-full h-[120px] xl:translate-y-[5px]">
+    <section className="flex items-center justify-center w-full h-[120px] xl:translate-y-[5px] px-0 xl:px-8 bg-white">
       <Carousel
         opts={{
           align: 'center',
