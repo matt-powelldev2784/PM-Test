@@ -4,6 +4,9 @@ import { tradeButtonData } from './tradeButtonData'
 import { cn } from '@/lib/utils'
 import { useState } from 'react'
 import { marketButtonData } from './marketButtonData'
+import arrowSquare from '@/assets/images/arrow-square.svg'
+import arrowBottomRight from '@/assets/images/arrow-bottom-right.png'
+import arrowTopRight from '@/assets/images/arrow-top-right.png'
 
 const Markets = () => {
   return (
@@ -17,8 +20,63 @@ const Markets = () => {
 
       <MarketButtons />
 
-      <TradeButtons />
+      <section className="w-[1048px] flex flex-row gap-6 mt-12 ">
+        <TradeButtons />
+        <Gold />
+      </section>
     </section>
+  )
+}
+
+const Gold = () => {
+  return (
+    <article className="relative w-[455px] h-[132px] flex items-center justify-evenly bg-[linear-gradient(270deg,#940006,#220001)] rounded-3xl">
+      <img
+        src={arrowSquare}
+        alt="square arrow icon"
+        className="absolute right-3 top-3 w-[17px] h-[17px]"
+      />
+
+      <div className="h-full pt-7 font-gilroy font-bold text-[24px]">
+        <p className="text-white">Gold</p>
+      </div>
+
+      <div className="flex flex-row gap-5">
+        <div className="w-[145px] h-[72px] flex items-center justify-center rounded-2xl bg-[linear-gradient(270deg,#ED1D25,#871115)] border-2 border-[#871115] ">
+          <div>
+            <p className="text-white text-[15px] h-5">Buy</p>
+
+            <div className="relative flex items-end w-[110px] ">
+              <p className="text-[24px] font-gilroy font-bold text-white">
+                3733.31
+              </p>
+              <img
+                src={arrowBottomRight}
+                alt="arrow bottom right icon"
+                className="absolute right-1 bottom-2.5 w-[17px] h-[17px]"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div className="w-[145px] h-[72px] flex items-center justify-center rounded-2xl bg-white border-2 border-premier-neutral ">
+          <div>
+            <p className="text-premier-red-market text-[15px] h-5">Buy</p>
+
+            <div className="relative flex items-end w-[110px] ">
+              <p className="text-[24px] font-gilroy font-bold text-premier-red-market">
+                3733.31
+              </p>
+              <img
+                src={arrowTopRight}
+                alt="arrow bottom right icon"
+                className="absolute right-1 bottom-2.5 w-[17px] h-[17px]"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
   )
 }
 
@@ -74,7 +132,7 @@ const TradeButtons = () => {
     setSelected(id)
   }
   return (
-    <section className="w-[1048px] flex flex-col gap-6 mt-12 ">
+    <section className="flex flex-col gap-6 mt-12 w-[300px]">
       {trades.map(({ key, ...trade }) => (
         <TradeButton
           key={key}
