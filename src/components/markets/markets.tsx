@@ -3,6 +3,7 @@ import cryptoIcon from '@/assets/images/crypto-logo.svg'
 import { tradeButtonData } from './tradeButtonData'
 import { cn } from '@/lib/utils'
 import { useState } from 'react'
+import { marketButtonData } from './marketButtonData'
 
 const Markets = () => {
   return (
@@ -14,34 +15,35 @@ const Markets = () => {
         latest news, trader sentiment, spreads, price action and much more.
       </p>
 
-      <div className="flex gap-8 mt-8">
-        <Button variant="redRounded" size="md">
-          Most Traded
-        </Button>
-
-        <Button variant="redOutline" size="md">
-          Commodities
-        </Button>
-
-        <Button variant="redOutline" size="md">
-          Indices
-        </Button>
-
-        <Button variant="redOutline" size="md">
-          Cryprocurrencies
-        </Button>
-
-        <Button variant="redOutline" size="md">
-          Shares
-        </Button>
-
-        <Button variant="redOutline" size="md">
-          ETFs
-        </Button>
-      </div>
+      <MarketButtons />
 
       <TradeButtons />
     </section>
+  )
+}
+
+const MarketButtons = () => {
+  return (
+    <div className="flex gap-8 mt-8">
+      {marketButtonData.map(({ key, ...buttonProps }) => (
+        <MarketButton key={key} {...buttonProps} />
+      ))}
+    </div>
+  )
+}
+
+type MarketButtonProps = {
+  text: string
+  style: string
+}
+
+const MarketButton = ({ text, style }: MarketButtonProps) => {
+  const variant = style === 'redRounded' ? 'redRounded' : 'redOutline'
+
+  return (
+    <Button variant={variant} size="md">
+      {text}
+    </Button>
   )
 }
 
@@ -120,7 +122,7 @@ const TradeButton = ({
           <div className="flex flex-col items-start justify-center">
             <p
               className={cn(
-                'text-[16px] tracking-wide transition-colors',
+                'text-[16px] tracking-wide transition-colors font-semibold',
                 selected ? 'text-white' : 'text-black'
               )}
             >
@@ -128,8 +130,8 @@ const TradeButton = ({
             </p>
             <p
               className={cn(
-                'text-[14px] tracking-wide transition-colors',
-                selected ? 'text-white/80' : 'text-black'
+                'text-[14px] tracking-wide transition-colors ',
+                selected ? 'text-white' : 'text-gray-700'
               )}
             >
               {fullName}
@@ -137,14 +139,25 @@ const TradeButton = ({
           </div>
         </div>
 
-        <p
-          className={cn(
-            'text-[14px] tracking-wide transition-colors',
-            selected ? 'text-white/80' : 'text-black'
-          )}
-        >
-          {price} {change}
-        </p>
+        <div className="flex gap-2">
+          <p
+            className={cn(
+              'text-[16px] tracking-wide transition-colors font-semibold',
+              selected ? 'text-white/80' : 'text-black'
+            )}
+          >
+            {price}
+          </p>
+
+          <p
+            className={cn(
+              'text-[16px] tracking-wide font-semibold',
+              selected ? 'text-white/80' : 'text-green-600'
+            )}
+          >
+            {change}
+          </p>
+        </div>
       </Button>
     </div>
   )
