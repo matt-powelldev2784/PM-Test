@@ -269,7 +269,7 @@ export function MobileMenuItems() {
       </Button>
 
       <Button size="lg" variant="destructive" className="font-bold w-full mt-4">
-        Register
+        Login
       </Button>
     </Accordion>
   )
