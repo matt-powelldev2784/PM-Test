@@ -2,7 +2,7 @@ import Button from '../ui/button'
 
 const Hero = () => {
   return (
-    <section className="relative bg-red-500 h-[751px]">
+    <section className="relative bg-red-500 h-[751px] hidden xl:block overflow-hidden">
       {/* Background Gradients */}
       <div className="absolute w-full h-[691px] bg-[linear-gradient(90deg,#320002_0%,#900006_33%,#ED1D25_100%)]"></div>
       <div className="absolute w-full h-[691px] bg-[linear-gradient(90deg,#ED1D25_100%,#ED1D2500_0%)] opacity-40"></div>
