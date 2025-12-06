@@ -109,7 +109,7 @@ export function NavigationMenu() {
           <DropdownMenuTrigger asChild>
             <Button variant="navButton" className="text-[16px] font-weight-100">
               {menu.menuName}
-              <img src={chevronIcon} alt="arrow down icon" />
+              <img src={chevronIcon} alt="arrow down" />
             </Button>
           </DropdownMenuTrigger>
 
@@ -119,7 +119,7 @@ export function NavigationMenu() {
 
       <a className="flex gap-2">
         <p className="text-premier-red">Partner with us</p>
-        <img src={arrowRightIcon} alt="arrow down icon" />
+        <img src={arrowRightIcon} alt="arrow down" />
       </a>
     </div>
   )
