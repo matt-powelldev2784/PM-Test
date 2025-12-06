@@ -12,7 +12,7 @@ import infoIcon from '@/assets/images/info.svg'
 
 const Markets = () => {
   return (
-    <section className="flex flex-col items-center justify-center w-full">
+    <section className="flex flex-col items-center justify-center w-full pb-32">
       <p className="mt-24 font-gilroy text-center text-[72px]">Our Markets</p>
 
       <p className="text-[18px] max-w-[60ch] text-center text-premier-grey">
@@ -29,7 +29,7 @@ const Markets = () => {
 
 const RightSection = () => {
   return (
-    <section className="w-[1048px] flex flex-row gap-6 mt-12 ">
+    <section className="relative w-[1048px] flex flex-row gap-6 mt-12 ">
       <TradeButtons />
 
       <div className="flex flex-col items-start gap-10 ">
@@ -45,7 +45,7 @@ const RightSection = () => {
                 </span>
               </p>
               <p className="mt-2">
-                Seller{' '}
+                Seller
                 <span className="ml-1.5 text-bold bg-gray-200 rounded p-0.5">
                   66.93%
                 </span>
@@ -62,13 +62,36 @@ const RightSection = () => {
         <img src={graph} alt="market graph" />
 
         <div className="flex gap-2 items-center justify-center -translate-y-4">
-          <img
-            src={infoIcon}
-            alt="market graph"
-            className="w-3 h-3"
-          />
+          <img src={infoIcon} alt="market graph" className="w-3 h-3" />
           <p className="text-[12px] text-[#B9B9B9]">
             Past performance is not a reliable indicator of future results
+          </p>
+        </div>
+
+        <div className="absolute h-[343px] right-2 top-43 flex flex-col gap-2 w-auto">
+          <p className="w-[37px] h-[37px] bg-premier-black rounded-lg text-white font-gilroy font-bold inline-flex items-center justify-center">
+            1d
+          </p>
+          <p className="w-[37px] h-[37px] bg-premier-red-market rounded-lg text-white font-gilroy font-bold inline-flex items-center justify-center">
+            1h
+          </p>
+          <p className="w-[37px] h-[37px] bg-premier-black rounded-lg text-white font-gilroy font-bold inline-flex items-center justify-center">
+            4h
+          </p>
+          <p className="w-[37px] h-[37px] bg-premier-black rounded-lg text-white font-gilroy font-bold inline-flex items-center justify-center">
+            1m
+          </p>
+          <p className="w-[37px] h-[37px] bg-premier-black rounded-lg text-white font-gilroy font-bold inline-flex items-center justify-center">
+            5m
+          </p>
+          <p className="w-[37px] h-[37px] bg-premier-black rounded-lg text-white font-gilroy font-bold inline-flex items-center justify-center">
+            15m
+          </p>
+          <p className="w-[37px] h-[37px] bg-premier-black rounded-lg text-white font-gilroy font-bold inline-flex items-center justify-center">
+            30m
+          </p>
+          <p className="w-[37px] h-[37px] bg-premier-black rounded-lg text-white font-gilroy font-bold inline-flex items-center justify-center">
+            1w
           </p>
         </div>
       </div>

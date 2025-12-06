@@ -8,7 +8,6 @@ function App() {
       <Header />
       <Hero />
       <Markets />
-      <div className="h-[100px] border-2 border-green-500">temp spacer</div>
     </>
   )
 }
