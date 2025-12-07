@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+set -euo pipefail
+
+# Block pushes unless tests and production build (which already runs tsc -b) pass
+npm run test && npm run build
