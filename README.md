@@ -43,7 +43,7 @@ https://matthew-powell-pm-test.netlify.app/
 - **Shadcn UI** - Component library
 - **ESLint** - Code linting
 - **Prettier** - Code formatting
-- **Husky** - Git hooks
+- **Husky** - Commit message, pre-commit, and pre-push hooks added
 
 # Notes / Assumptions
 
