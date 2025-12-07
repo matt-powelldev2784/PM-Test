@@ -62,7 +62,7 @@ This is scrollable on small screen sizes.
 **Markets Section**  
 As I am using Shadcn UI components, I have not had any need to to use state management.
 Using Shadcn speeds up development time, and is well tested by the community.
-Therefore, I add interactivity to the bitcoin buttons on the left of this section.
+Therefore, I have added interactivity to the bitcoin buttons on the left of this section.
 This demonstrates how I would add interactivity using state management in React.
 
 I have focused on building out the desktop and mobile versions of these sections to be as close to the design as possible.
