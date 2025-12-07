@@ -12,6 +12,12 @@ import {
   DialogTitle,
   DialogTrigger,
 } from '@/components/ui/dialog'
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '@/components/ui/accordion'
 import { navigationItems } from './navigationItems'
 import menuIcon from '@/assets/images/menu-line-horizontal.svg'
 import logo from '@/assets/images/premier-logo.svg'
@@ -217,12 +223,7 @@ const MobileMenu = () => {
   )
 }
 
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from '@/components/ui/accordion'
+
 
 const MobileMenuItems = () => {
   return (
