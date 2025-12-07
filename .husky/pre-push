@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# Block pushes unless type checking, tests, and production build all pass
+npm run typecheck && npm run test && npm run build
