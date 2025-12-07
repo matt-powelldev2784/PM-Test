@@ -37,7 +37,7 @@ https://matthew-powell-pm-test.netlify.app/
 - **ESLint** - Code linting
 - **Prettier** - Code formatting
 
-# Notes
+# Notes / Assumptions
 
 I have built the follow sections of the homepage.
 
@@ -62,6 +62,13 @@ I have not implemented full responsiveness across all screen sizes due to time c
 I have followed the component composition model, therefore the may be several components in a single file.
 
 ## What you would improve with more time
+
+- Complete responsiveness across all screen sizes.
+- Add interactivity to more components.
+- Implement accessibility features.
+- Add unit and integration tests.
+- Optimize images and assets for better performance.
+
 
 
 
