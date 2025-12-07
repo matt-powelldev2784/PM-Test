@@ -45,14 +45,14 @@ I have built the follow sections of the homepage.
 
 Navigation menus build with Shadcn drop-down and accordion components for desktop and mobile versions respectively.
 
-**Hero Section**
+**Hero Section**. 
 Desktop and mobile versions of the hero section with form inputs and buttons.
 
-**Forex Buttons Below Hero Section**
+**Forex Buttons Below Hero Section**. 
 Build with Shadcn carousel component.
 This is scrollable on small screen sizes.
 
-**Markets Section**
+**Markets Section**. 
 As I am using Shadcn UI components, I have not had any need to to use state management.
 Using Shadcn speeds up development time, and are well tested by the community.
 Therefore, I add interactivity to the bitcoin buttons on the left of this section.
