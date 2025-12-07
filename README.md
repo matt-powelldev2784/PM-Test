@@ -60,7 +60,8 @@ Build with Shadcn carousel component.
 This is scrollable on small screen sizes.
 
 **Markets Section**  
-I am using Shadcn UI components. Using Shadcn speeds up development time, and is well tested by the community.
+I am using Shadcn UI components. Using Shadcn speeds up development time, manages UI updates for you,
+and is well tested by the community.
 For this reason, I have not had any need to to use state management.
 Therefore, I have added interactivity to the bitcoin buttons on the left of this section.
 This demonstrates how I would add interactivity using state management in React.
