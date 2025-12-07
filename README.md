@@ -43,6 +43,7 @@ https://matthew-powell-pm-test.netlify.app/
 - **Shadcn UI** - Component library
 - **ESLint** - Code linting
 - **Prettier** - Code formatting
+- **Husky** - Git hooks
 
 # Notes / Assumptions
 
