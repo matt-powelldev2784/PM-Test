@@ -24,7 +24,7 @@ Start the development server:
 npm run dev
 ```
 
-Click the following URL in the terminal to the application in your browser:
+Click the following URL from the terminal to open the application in your browser:
 
 ```bash
 http://localhost:5173
@@ -56,15 +56,10 @@ Navigation menus built with Shadcn drop-down and accordion components for deskto
 Desktop and mobile versions of the hero section with form inputs and buttons.
 
 **Forex Buttons Below Hero Section**  
-Build with Shadcn carousel component.
-This is scrollable on small screen sizes.
+Built with the Shadcn carousel component. This carousel is scrollable on small screen sizes.
 
 **Markets Section**  
-I am using Shadcn UI components. Using Shadcn speeds up development time, manages UI updates for you,
-and is well tested by the community.
-For this reason, I have not had any need to to use state management.
-Therefore, I have added interactivity to the bitcoin buttons on the left of this section.
-This demonstrates how I would add interactivity using state management in React.
+This section also uses Shadcn UI components. Shadcn speeds up development time, manages UI updates, and is well tested by the community. Because of that, I have not needed to use React state management. I have added interactivity to the Bitcoin buttons on the left side of this section to demonstrate how I would wire up local state in React.
 
 I have focused on building out the desktop and mobile versions of these sections to be as close to the design as possible.
 I have not implemented full responsiveness across all screen sizes due to time constraints.
@@ -75,9 +70,9 @@ I have set up Vitest and React Testing Library for testing.
 I have included a basic snapshot test for the App component to demonstrate the testing setup.
 
 **Husky Commit Hooks**  
-Commit-message hook is setup to enforce commit naming conventions.
-Pre-commit hook is setup to check staged files with lint-staged.
-Pre-push hook is setup to run tsc, tests and build before allowing a push.
+Commit-message hook is set up to enforce commit naming conventions.
+Pre-commit hook is set up to check staged files with lint-staged.
+Pre-push hook is set up to run tsc, tests and build before allowing a push.
 
 ## What you would improve with more time
 
