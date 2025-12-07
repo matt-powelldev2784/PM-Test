@@ -61,6 +61,10 @@ I have focused on building out the desktop and mobile versions of these sections
 I have not implemented full responsiveness across all screen sizes due to time constraints.
 I have followed the component composition model, therefore the may be several components in a single file.
 
+**Testing**
+I have set up Vitest and React Testing Library for testing.
+I have included a basic snapshot test for the App component to demonstrate the testing setup.
+
 ## What you would improve with more time
 
 - Complete responsiveness across all screen sizes.
