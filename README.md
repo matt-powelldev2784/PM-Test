@@ -70,11 +70,11 @@ I have focused on building out the desktop and mobile versions of these sections
 I have not implemented full responsiveness across all screen sizes due to time constraints.
 I have followed the component composition model, therefore there may be several components in a single file.
 
-**Testing**
+**Testing**  
 I have set up Vitest and React Testing Library for testing.
 I have included a basic snapshot test for the App component to demonstrate the testing setup.
 
-**Husky Commit Hooks**
+**Husky Commit Hooks**  
 Commit-message hook is setup to enforce commit naming conventions.
 Pre-commit hook is setup to check staged files with lint-staged.
 Pre-push hook is setup to run tsc, tests and build before allowing a push.
