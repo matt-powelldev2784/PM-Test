@@ -1,19 +1,19 @@
 ##  Quick Start
 
-Clone the repository
+Clone the repository:
 ```bash
 git clone https://github.com/matt-powelldev2784/PM-Test.git
 ```
-Navigate to the project directory
+Navigate to the project directory:
 ```bash
 cd PM-Test
 ```
-Install dependencies
+Install dependencies:
 ```bash
 npm install
 ```
 
-Start the development server
+Start the development server:
 ```bash
 npm run dev
 ```
