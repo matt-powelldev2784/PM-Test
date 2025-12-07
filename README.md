@@ -76,6 +76,7 @@ Pre-push hook is set up to run tsc, tests and build before allowing a push.
 
 ## What you would improve with more time
 
+- Complete the remaining sections of the homepage.
 - Complete responsiveness across all screen sizes.
 - Add interactivity to more components.
 - Implement accessibility features.
