@@ -1,24 +1,31 @@
-##  Quick Start
+## Quick Start
 
 Clone the repository:
+
 ```bash
 git clone https://github.com/matt-powelldev2784/PM-Test.git
 ```
+
 Navigate to the project directory:
+
 ```bash
 cd PM-Test
 ```
+
 Install dependencies:
+
 ```bash
 npm install
 ```
 
 Start the development server:
+
 ```bash
 npm run dev
 ```
 
 Click the following URL in the terminal to the application in your browser:
+
 ```bash
 http://localhost:5173
 ```
@@ -41,7 +48,7 @@ https://matthew-powell-pm-test.netlify.app/
 
 I have built the follow sections of the homepage.
 
-**Header / Navigation Bar**    
+**Header / Navigation Bar**  
 Navigation menus build with Shadcn drop-down and accordion components for desktop and mobile versions respectively.
 
 **Hero Section**  
@@ -65,6 +72,11 @@ I have followed the component composition model, therefore the may be several co
 I have set up Vitest and React Testing Library for testing.
 I have included a basic snapshot test for the App component to demonstrate the testing setup.
 
+**Husky Commit Hooks**
+Commit-message hook is setup to enforce commit naming conventions.
+Pre-commit hook is setup to check staged files with lint-staged.
+Pre-push hook is setup to run tsc, tests and build before allowing a push.
+
 ## What you would improve with more time
 
 - Complete responsiveness across all screen sizes.
@@ -72,9 +84,3 @@ I have included a basic snapshot test for the App component to demonstrate the t
 - Implement accessibility features.
 - Add unit and integration tests.
 - Optimize images and assets for better performance.
-
-
-
-
-
-
