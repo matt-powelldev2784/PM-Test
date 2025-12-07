@@ -84,3 +84,4 @@ Pre-push hook is setup to run tsc, tests and build before allowing a push.
 - Implement accessibility features.
 - Add unit and integration tests.
 - Optimize images and assets for better performance.
+- Lazy load components where appropriate.
