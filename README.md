@@ -41,8 +41,7 @@ https://matthew-powell-pm-test.netlify.app/
 
 I have built the follow sections of the homepage.
 
-**Header / Navigation Bar**
-
+**Header / Navigation Bar**    
 Navigation menus build with Shadcn drop-down and accordion components for desktop and mobile versions respectively.
 
 **Hero Section**  
