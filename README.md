@@ -68,7 +68,7 @@ This demonstrates how I would add interactivity using state management in React.
 
 I have focused on building out the desktop and mobile versions of these sections to be as close to the design as possible.
 I have not implemented full responsiveness across all screen sizes due to time constraints.
-I have followed the component composition model, therefore the may be several components in a single file.
+I have followed the component composition model, therefore there may be several components in a single file.
 
 **Testing**
 I have set up Vitest and React Testing Library for testing.
