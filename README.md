@@ -23,4 +23,14 @@ Click the following URL in the terminal to the application in your browser:
 http://localhost:5173
 ```
 
+## Tech Stack
+
+- **Vite** - Modern build tool
+- **React** - JavaScript library for building user interfaces
+- **TypeScript** - Type-safe JavaScript
+- **Tailwind CSS** - Utility-first CSS framework
+- **ESLint** - Code linting
+- **Prettier** - Code formatting
+
+
 
