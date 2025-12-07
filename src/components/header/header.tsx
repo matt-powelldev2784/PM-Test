@@ -224,7 +224,7 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion'
 
-export function MobileMenuItems() {
+const MobileMenuItems = () => {
   return (
     <Accordion type="single" collapsible className="w-full mt-2">
       {navigationItems.map((item) => (
