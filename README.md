@@ -23,6 +23,10 @@ Click the following URL in the terminal to the application in your browser:
 http://localhost:5173
 ```
 
+## Deployed Site
+
+https://matthew-powell-pm-test.netlify.app/
+
 ## Tech Stack
 
 - **Vite** - Modern build tool
@@ -31,6 +35,8 @@ http://localhost:5173
 - **Tailwind CSS** - Utility-first CSS framework
 - **ESLint** - Code linting
 - **Prettier** - Code formatting
+
+
 
 
 
