@@ -30,7 +30,7 @@ https://matthew-powell-pm-test.netlify.app/
 ## Tech Stack
 
 - **Vite** - Modern build tool
-- **React** - JavaScript library for building user interfaces
+- **React 19** - JavaScript library for building user interfaces
 - **TypeScript** - Type-safe JavaScript
 - **Tailwind CSS** - Utility-first CSS framework
 - **ESLint** - Code linting
